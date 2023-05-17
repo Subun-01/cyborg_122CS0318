@@ -3,7 +3,7 @@ font=cv2.FONT_HERSHEY_COMPLEX
 font2=cv2.FONT_HERSHEY_SIMPLEX
 
 
-img=cv2.imread('white.jpg')
+img=cv2.imread('bg.jpg')
 print(img.shape)
 img=cv2.resize(img,(1800,900))
 
