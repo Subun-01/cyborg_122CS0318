@@ -15,8 +15,14 @@ class camera_1:
   def callback(self,data):
     bridge = CvBridge()
     cv_image = bridge.imgmsg_to_cv2(data, desired_encoding="bgr8")
-    image = cv_image
-    cv2.imshow("ROBOT_CAM", image)
+    # cv_image=cv_image[790:791,170:620]
+    # gray_image = cv2.cvtColor(cv_image, cv2.COLOR_BGR2GRAY)
+    # _, binary_image = cv2.threshold(gray_image, 100, 255, cv2.THRESH_BINARY)
+    # image = cv_image[530:790,165:635]
+    # cv2.imshow("ROBOT_CAM2", binary_image)
+    
+    
+    cv2.imshow("ROBOT_CAM", cv_image)
     cv2.waitKey(3)
     
 

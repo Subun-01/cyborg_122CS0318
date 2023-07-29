@@ -1,7 +1,7 @@
 
 # ROS_task2
 
-This package contains the necessary code and instructions to teleoperate a robot in Gazebo using ROS (Robot Operating System) and process images.
+This package contains the necessary code and instructions to teleoperate a robot in Gazebo using ROS (Robot Operating System) and process images as well as follow the line.
 
 ##  Objectives
 
@@ -9,6 +9,7 @@ This package contains the necessary code and instructions to teleoperate a robot
 2) Write a launch file so as to spawn the bot urdf (urdf provided in drive link) in the arena made.
 3) Add differential drive plugin and try to teleop the bot 
 4) Add camera plugin to the robot and write a ros script which subscribes to the image and display it using opencv. 
+5)Add a script to follow the lines
 ## Prerequisites
 ROS noetic  
 Gazebo   
@@ -32,26 +33,17 @@ It contains the .urdf file to build the bot using meshes given.
 It has a pyhton-script coded to display the image receiving from the bot cam.  
 ## Running the bot
 
-Start ros-master
-```bash
-~$ roscore
-```
-install teleop twist keyboard(if not installed )
-```bash
-~$ sudo apt-get install ros-noetic-teleop-twist-keyboard
-```
-(in a new terminal) Launching our world.launch file
+(in terminal) Launching our world.launch file that contains the line_follower bot
 ```bash
 ~$ roslaunch line_follower world.launch
 ```
 
 
-Now move the bot using-( u i p j k l m  , . )keys
+
 ## Demo
 
 [Screenshot](https://drive.google.com/file/d/1jgGNeQwhhFJM12g-FpKOI0k_bTGR7gB2/view?usp=drivesdk)
 
-[ demo ](https://drive.google.com/file/d/1jgLeAffV1_YWZdcDtuxy_pLy8-KZun7Q/view?usp=drivesdk)
 
 
 ## Documentation

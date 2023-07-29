@@ -11,13 +11,15 @@
   <env name="GAZEBO_MODEL_PATH" value="$(find line_follower)/model" />
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find line_follower)/world/myworld.world"/> 
+    <arg name="world_name" value="$(find line_follower)/world/bot.world"/> 
     <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
     <arg name="gui" value="true"/>
     <arg name="recording" value="false"/>
     <arg name="debug" value="false"/>
   </include>
+  <node name="Robot_move" pkg="line_follower" type="bot_mv.py" output="screen" respawn="true"/>
   <node name="Robot_cam" pkg="line_follower" type="img.py" output="screen" respawn="true"/>
-  <node name="move" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen" respawn="true"/>
+
+  <!-- <node name="move" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen" respawn="true"/> -->
 </launch>
